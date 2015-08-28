@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: GPUG
+        psr4_prefix: GPUG
+        src_path: app
