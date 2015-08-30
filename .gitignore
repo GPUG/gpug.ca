@@ -2,4 +2,8 @@
 /node_modules
 Homestead.yaml
 Homestead.json
+/.vagrant
+/public/css
+/public/fonts
+/public/js
 .env
