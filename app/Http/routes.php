@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/slack-invite', 'SlackController@invite');
+Route::get('/slack-invited', 'SlackController@invited');
