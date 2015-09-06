@@ -144,6 +144,8 @@ return [
         GPUG\Providers\EventServiceProvider::class,
         GPUG\Providers\RouteServiceProvider::class,
 
+        AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+
     ],
 
     /*
@@ -191,6 +193,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        'OAuth' => AdamWathan\EloquentOAuth\Facades\OAuth::class,
 
     ],
 

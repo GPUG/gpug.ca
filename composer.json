@@ -4,11 +4,18 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/GPUG/socialnorm-meetup"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "predis/predis": "^1.0",
-        "guzzlehttp/guzzle": "^6.0"
+        "socialnorm/meetup": "^0.1",
+        "adamwathan/eloquent-oauth-l5": "^0.2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
