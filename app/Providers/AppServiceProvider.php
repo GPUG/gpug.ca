@@ -16,15 +16,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // bind and register the SocialNorm MeetupProvider with EloquentOAuth
-        $this->app->bind(MeetupProvider::class, function ($app) {
-            return new MeetupProvider (
-                $app['config']->get('eloquent-oauth.providers')['meetup'],
-                new HttpClient(),
-                new SocialNormRequest($app['request']->all())
-            );
-        });
-
         $this->app['adamwathan.oauth']->registerProvider('meetup', $this->app[MeetupProvider::class]);
     }
 
@@ -35,6 +26,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(MeetupProvider::class, function ($app) {
+            return new MeetupProvider (
+                $app['config']->get('eloquent-oauth.providers')['meetup'],
+                new HttpClient(),
+                new SocialNormRequest($app['request']->all())
+            );
+        });
     }
 }
