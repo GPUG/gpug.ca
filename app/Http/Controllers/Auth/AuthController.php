@@ -4,11 +4,7 @@ namespace GPUG\Http\Controllers\Auth;
 
 use GPUG\User;
 use Validator;
-use Illuminate\Http\Request;
-use GuzzleHttp\Client as HttpClient;
-use SocialNorm\Meetup\MeetupProvider;
 use GPUG\Http\Controllers\Controller;
-use SocialNorm\Request as SocialNormRequest;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use SocialNorm\Exceptions\ApplicationRejectedException;
 use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
@@ -40,17 +36,13 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
-    public function redirectToProvider(Request $request)
+    public function redirectToProvider()
     {
-        $this->registerSocialNormMeetupProvider($request);
-
         return \OAuth::authorize('meetup');
     }
 
-    public function handleProviderCallback(Request $request)
+    public function handleProviderCallback()
     {
-        $this->registerSocialNormMeetupProvider($request);
-
         try {
             \OAuth::login('meetup');
         } catch (ApplicationRejectedException $e) {
@@ -60,19 +52,7 @@ class AuthController extends Controller
             // code,likely forgery attempt
         }
 
-        return Redirect::intended();
-    }
-
-    protected function registerSocialNormMeetupProvider($request)
-    {
-        \OAuth::registerProvider(
-            'meetup',
-            new MeetupProvider(
-                config('eloquent-oauth.providers')['meetup'],
-                new HttpClient(),
-                new SocialNormRequest($request->all())
-            )
-        );
+        return redirect()->intended();
     }
 
     /**
