@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->singleton(MeetupProvider::class, function ($app) {
             return new MeetupProvider (
-                $app['config']->get('eloquent-oauth.providers')['meetup'],
+                $app['config']->get('eloquent-oauth.providers.meetup'),
                 new HttpClient(),
                 new SocialNormRequest($app['request']->all())
             );
