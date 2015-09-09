@@ -1,5 +1,16 @@
+$navbar-height: 70px;
+
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 body {
-  padding-top: 50px;
+  padding-top: 70px;
+}
+
+.img-profile {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.brand-logo {
+    font-size: 1.75em;
 }
