@@ -36,11 +36,10 @@ class AuthController extends Controller
     {
         try {
             OAuth::login('meetup', function ($user, $details) {
-                $user->update([
-                    'name' => $details->full_name,
-                    'email' => $details->email,
-                    'avatar' => $details->avatar
-                ]);
+                $user->name = $details->full_name;
+                $user->email = $details->email;
+                $user->avatar = $details->avatar;
+                $user->save();
             });
         } catch (ApplicationRejectedException $e) {
             // User rejected application
