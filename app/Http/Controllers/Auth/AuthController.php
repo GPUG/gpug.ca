@@ -44,9 +44,11 @@ class AuthController extends Controller
             });
         } catch (ApplicationRejectedException $e) {
             // User rejected application
+            return redirect('/');
         } catch (InvalidAuthorizationCodeException $e) {
             // Authorization was attempted with invalid
             // code,likely forgery attempt
+            return redirect('https://www.youtube.com/watch_popup?v=dQw4w9WgXcQ');
         }
 
         return redirect()->intended();
