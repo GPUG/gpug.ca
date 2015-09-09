@@ -20,4 +20,4 @@ Route::get('/slack-invited', 'SlackController@invited');
 
 Route::get('/auth/login', 'Auth\AuthController@redirectToProvider');
 Route::get('/auth/logout', 'Auth\AuthController@getLogout');
-Route::get('/callback', 'Auth\AuthController@handleProviderCallback');
+Route::get('/auth/callback', 'Auth\AuthController@handleProviderCallback');
