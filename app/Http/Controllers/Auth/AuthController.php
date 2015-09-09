@@ -35,7 +35,13 @@ class AuthController extends Controller
     public function handleProviderCallback()
     {
         try {
-            OAuth::login('meetup');
+            OAuth::login('meetup', function ($user, $details) {
+                $user->update([
+                    'name' => $details->full_name,
+                    'email' => $details->email,
+                    'avatar' => $details->avatar
+                ]);
+            });
         } catch (ApplicationRejectedException $e) {
             // User rejected application
         } catch (InvalidAuthorizationCodeException $e) {
