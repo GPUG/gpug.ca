@@ -47,6 +47,12 @@
         @yield('content')
     </div><!-- /.container -->
 
+    <footer class="footer">
+        <div class="container">
+            <p>{{ $copyright }} GPUG.ca</p>
+        </div>
+    </footer>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

@@ -145,6 +145,7 @@ return [
         GPUG\Providers\RouteServiceProvider::class,
 
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
+        GPUG\Providers\ComposerServiceProvider::class
 
     ],
 
