@@ -16,7 +16,7 @@
         "predis/predis": "^1.0",
         "socialnorm/meetup": "^0.1",
         "adamwathan/eloquent-oauth-l5": "^0.2.0",
-        "soupbowlweb/copyrighter": "dev-master"
+        "soupbowlweb/copyrighter": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7213d1d77b25d68e9a24691e9310899c",
+    "hash": "9624ffccd1ebeab54e4163feaa1970d6",
     "packages": [
         {
             "name": "adamwathan/eloquent-oauth",
@@ -1576,7 +1576,7 @@
         },
         {
             "name": "soupbowlweb/copyrighter",
-            "version": "dev-master",
+            "version": "1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoupBowlWeb/Copyrighter.git",
@@ -3682,9 +3682,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "soupbowlweb/copyrighter": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
