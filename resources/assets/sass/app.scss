@@ -2,12 +2,15 @@
 @import 'variables';
 @import 'mixins';
 
-
 html,
 body {
   height: 100%;
 }
-a:focus,a:active{outline:none;}
+
+a:focus,
+a:active {
+  outline: none;
+}
 
 .btn {
   @include transition;
@@ -22,7 +25,8 @@ Navbar Styling
   padding: $med-spacing;
 
   .navbar-header {
-    margin:0;
+    margin: 0;
+
     .brand-logo {
       font-size: 1.4em;
       margin: 0;
@@ -30,9 +34,10 @@ Navbar Styling
       height: 44px;
       color: $light;
       @include transition;
-        &:hover{
-          opacity:.8;
-        }
+
+      &:hover {
+        opacity: 0.8;
+      }
 
       img {
         display: inline-block;
@@ -44,13 +49,13 @@ Navbar Styling
   .btn-join {
     @include rounded;
     background-color: transparent;
-    border:1px solid $muted;
+    border: 1px solid $muted;
     padding: 6px 20px;
     color: #fff;
-    margin:0;
+    margin: 0;
 
     &:hover {
-      border:1px solid #FFF;
+      border: 1px solid #fff;
     }
 
     &:active {
@@ -58,10 +63,16 @@ Navbar Styling
     }
   }
 
-  .img-profile {
-    height: 50px;
-    margin-top: $med-spacing;
-    border-radius: 1000px;
+  .navbar-right {
+    list-style: none;
+    margin-right: 0;
+
+    .img-profile {
+      height: 50px;
+      width: 50px;
+      border-radius: 1000px;
+      background-color: $secondary-color;
+    }
   }
 }
 
@@ -73,12 +84,12 @@ Jumbotron Styling
   margin: 0;
   display: flex;
   align-items: center;
-  background: url(../img/bg.jpg) top center no-repeat #000;
-  background-size:cover;
+  background: url("../img/bg.jpg") top center no-repeat #000;
+  background-size: cover;
 
   .slack-callout {
     margin-bottom: $lrg-spacing;
-    color: #FFF;
+    color: #fff;
     text-shadow: 0 0 6px rgba(0,0,0,.2);
 
     img {
@@ -122,7 +133,7 @@ Footer Styling
   padding: $lrg-spacing;
   position: absolute;
   bottom: 0;
-  color: #FFF;
+  color: #fff;
 
   p {
     margin: 0;
@@ -155,10 +166,9 @@ Mobile Styling
       width: 100%;
     }
   }
+
   .jumbotron {
-
     .slack-callout {
-
       img {
         display: none;
       }
