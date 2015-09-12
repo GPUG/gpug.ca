@@ -1,0 +1,6 @@
+@mixin transition {
+  transition: all 200ms linear;
+}
+@mixin rounded{
+  border-radius:1000px;
+}
