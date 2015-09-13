@@ -12,10 +12,18 @@ class SlackController extends Controller
 {
     public function invite(Request $request)
     {
+        $channels = ['lobby' => 'C0A0C4EBA', 'random' => 'C0A0CGSPK'];
+        $formData = [
+            ['name' => 'email', 'contents' => $request->input('email')],
+            ['name' => 'channels', 'contents' => implode(',', $channels)],
+            ['name' => 'token', 'contents' => env('SLACK_KEY')],
+            ['name' => 'set_active', 'contents' => 'true']
+        ];
+
         $client = new Client(['http_errors' => false]);
         $client->post(
-            'http://localhost:8080',
-            ['body' => ['email' => $request->input('email')]]
+            'https://gpug.slack.com/api/users.admin.invite',
+            ['multipart' => $formData]
         );
 
         return redirect('/slack-invited');
