@@ -23,7 +23,7 @@
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-header">
-        <a class="navbar-brand brand-logo" href="/"><img src="/img/id.svg" class="img-responsive" width="250" alt="Guelph php user group"/></a>
+        <a class="navbar-brand brand-logo" href="/"><img src="/img/id.svg" class="img-responsive" width="250" alt="GPUG PHP User Group"/></a>
       </div>
       @if (! Auth::check())
       <a class="btn btn-join navbar-btn pull-right" href="/auth/login">Sign in with Meetup</a> @else
