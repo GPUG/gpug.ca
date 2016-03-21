@@ -5,7 +5,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-12 text-center">
-        <h1 class="slack-callout">Join our slack <img src="/img/slack_rgb.png" class="img-responsive"/> channel!</h1>
+        <h1 class="slack-callout">Join our slack <img src="/img/slack_rgb.png" alt="" class="img-responsive"/> channel!</h1>
      </div>
 </div>
 <div class="row">
