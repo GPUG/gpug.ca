@@ -7,7 +7,7 @@ class LayoutComposer
 {
     public function compose(View $view)
     {
-        $copyRighter = CopyrighterFactory::create(['geo-locator' => 'FreeGeoIP']);
+        $copyRighter = CopyrighterFactory::create();
         $view->with('copyright', $copyRighter->getCopyright());
     }
 }
